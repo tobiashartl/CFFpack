@@ -47,3 +47,6 @@ cbind(parm, c(d, diag(ar), A[em_pq$A != 0], rep(1, p)))
 
 parm_true <- c(d, diag(ar), A[em_pq$A != 0], rep(1, p))
 CFF_CAR_LLderiv_pq(parm_true, Y, f1, f2, l, pq)
+cbind(c(attr(numericDeriv(quote(CFF_CAR_LLval_pq(parm_true, Y, f1, f2, l, pq)), "parm_true"), "gradient")),
+      CFF_CAR_LLderiv_pq(parm_true, Y, f1, f2, l, pq)
+)
