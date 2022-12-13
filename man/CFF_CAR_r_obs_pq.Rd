@@ -11,6 +11,8 @@ CFF_CAR_r_obs_pq(gamma, p, f1, f2, pq)
 the factor loadings for the long memory factors, and the loadings for the
 short memory factors}
 
+\item{p}{Number of variables}
+
 \item{f1}{A vector of length equal the number of fractionally integrated factor
 groups. Each entry corresponds to the number of factors for each group, in
 descending memory.}
