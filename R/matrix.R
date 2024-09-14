@@ -143,9 +143,8 @@ toComp <- function(x)
     p <- ncol(x)/k
     if (p>1) x <- rbind(x, cbind(diag((p-1)*k),matrix(0,(p-1)*k,k)))
     eigv <- eigen(x,only.values=TRUE)$values
-    return(list(CompMat=x,eigv=eigv,stable=all(abs(eigv)<1)))
+    return(list(CompMat=x,eigv=eigv,stable=all(round(abs(eigv), digits = 2)<1)))
 }
-
 
 # rotation to make a matrix lower triangular
 rotate_triang <- function(A)
